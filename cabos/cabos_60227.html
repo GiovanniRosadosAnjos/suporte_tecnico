@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IEC 60227-5 — Catálogo de Cabos</title>
+<style>
+  :root {
+    --azul: #4e77af;
+    --azul-claro: #97ccef;
+    --preto: #231f20;
+    --bg: #f5f7fa;
+    --branco: #ffffff;
+    --cinza-linha: #e8ecf1;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--preto);
+    padding: 32px 24px;
+    font-size: 14px;
+  }
+
+  header {
+    border-left: 5px solid var(--azul);
+    padding: 0 0 0 16px;
+    margin-bottom: 28px;
+  }
+
+  header h1 { font-size: 20px; color: var(--azul); font-weight: 700; }
+  header p { color: #666; font-size: 13px; margin-top: 4px; line-height: 1.5; }
+
+  .secao-titulo {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--azul);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--azul-claro);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    margin-bottom: 32px;
+  }
+
+  thead tr { background: var(--azul); color: var(--branco); }
+  thead th {
+    padding: 11px 14px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  tbody tr { border-bottom: 1px solid var(--cinza-linha); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: #f0f5fb; }
+  tbody tr.ref-externa { background: #fafafa; color: #999; font-style: italic; }
+
+  td { padding: 10px 14px; vertical-align: middle; font-size: 13px; }
+
+  .codigo {
+    font-family: monospace;
+    font-size: 12px;
+    background: #edf2f9;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: var(--azul);
+    white-space: nowrap;
+  }
+
+  .codigo-br {
+    font-family: monospace;
+    font-size: 12px;
+    background: #e8f5ed;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: #1a7f3c;
+    white-space: nowrap;
+  }
+
+  .nota-bloco {
+    background: var(--branco);
+    border-left: 4px solid var(--azul-claro);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    line-height: 1.6;
+  }
+
+  .nota-bloco p { margin-bottom: 6px; }
+  .nota-bloco p:last-child { margin-bottom: 0; }
+
+  footer { font-size: 12px; color: #aaa; margin-top: 16px; text-align: right; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>IEC 60227-5:2024 — Cordões e Cabos Flexíveis</h1>
+  <p>Polyvinyl chloride insulated cables · Part 5: Flexible cables (cords)<br>
+  Equivalente brasileiro: <strong>ABNT NBR NM 247-5</strong></p>
+</header>
+
+<div class="secao-titulo">Tipos de cabos</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Seção</th>
+      <th>Designação IEC</th>
+      <th>Designação BR</th>
+      <th>Descrição</th>
+      <th>Formato</th>
+      <th>Condutores</th>
+      <th>Isolação</th>
+      <th>Cobertura</th>
+      <th>Temp. max.</th>
+      <th>U/U0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4</td>
+      <td><span class="codigo">60227 IEC 41</span></td>
+      <td>—</td>
+      <td>Cordão plano de ouropel (tinsel)</td>
+      <td>Plano</td>
+      <td>2 (tinsel)</td>
+      <td>PVC/D</td>
+      <td>Nenhuma</td>
+      <td>70°C</td>
+      <td>300/300 V</td>
+    </tr>
+    <tr class="ref-externa">
+      <td>5</td>
+      <td>—</td>
+      <td>—</td>
+      <td>Vago</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><span class="codigo">60227 IEC 43</span></td>
+      <td><span class="codigo-br">247 NM 43-C5</span></td>
+      <td>Cordão para correntes de iluminação decorativa interna</td>
+      <td>—</td>
+      <td>1 (Cl. 6)</td>
+      <td>PVC/D (2 camadas)</td>
+      <td>Nenhuma</td>
+      <td>70°C</td>
+      <td>300/300 V</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><span class="codigo">60227 IEC 52</span></td>
+      <td><span class="codigo-br">247 NM 52-CX</span></td>
+      <td>Cordão com cobertura leve de policloreto de vinila</td>
+      <td>Circular ou Plano</td>
+      <td>2 e 3 (Cl. 5)</td>
+      <td>PVC/D</td>
+      <td>PVC/ST5 — leve</td>
+      <td>70°C</td>
+      <td>300/300 V</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><span class="codigo">60227 IEC 53</span></td>
+      <td><span class="codigo-br">247 NM 53-CX</span></td>
+      <td>Cordão com cobertura comum de policloreto de vinila</td>
+      <td>Circular ou Plano</td>
+      <td>2, 3, 4 ou 5 (Cl. 5)</td>
+      <td>PVC/D</td>
+      <td>PVC/ST5 — comum</td>
+      <td>70°C</td>
+      <td>300/500 V</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><span class="codigo">60227 IEC 56</span></td>
+      <td>—</td>
+      <td>Cordão com cobertura leve de PVC resistente ao calor</td>
+      <td>Circular ou Plano</td>
+      <td>2 e 3 (Cl. 5)</td>
+      <td>PVC/E</td>
+      <td>PVC/ST10 — leve</td>
+      <td>90°C</td>
+      <td>300/300 V</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><span class="codigo">60227 IEC 57</span></td>
+      <td>—</td>
+      <td>Cordão com cobertura comum de PVC resistente ao calor</td>
+      <td>Circular ou Plano</td>
+      <td>2, 3, 4 ou 5 (Cl. 5)</td>
+      <td>PVC/E</td>
+      <td>PVC/ST10 — comum</td>
+      <td>90°C</td>
+      <td>300/500 V</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="secao-titulo">Legenda de designação brasileira (ABNT NBR NM 247-5)</div>
+
+<div class="nota-bloco">
+  <p><strong>Formato geral:</strong> <span style="font-family:monospace;font-size:13px">247 NM XX-CX</span></p>
+  <p style="margin-top:8px"><span style="font-family:monospace">247</span> — série Mercosul equivalente à IEC 60227</p>
+  <p><span style="font-family:monospace">NM</span> — Norma Mercosul</p>
+  <p><span style="font-family:monospace">XX</span> — tipo do cabo (42, 43, 52, 53…)</p>
+  <p><span style="font-family:monospace">C</span> — prefixo de classe do condutor</p>
+  <p><span style="font-family:monospace">X</span> — número da classe: 4 (rígido encordoado), 5 (flexível), 6 (extra flexível) — conforme ABNT NBR NM 280</p>
+  <p style="margin-top:8px"><strong>Não harmonizado:</strong> IEC 41 (tinsel), IEC 56 e IEC 57 (resistentes ao calor 90°C) — sem equivalente na série NM 247.</p>
+</div>
+
+<div class="secao-titulo">Legenda de materiais</div>
+
+<div class="nota-bloco">
+  <p><strong>PVC/D</strong> — composto de policloreto de vinila para isolação a 70°C</p>
+  <p><strong>PVC/E</strong> — composto de policloreto de vinila para isolação a 90°C (resistente ao calor)</p>
+  <p><strong>PVC/ST5</strong> — composto de policloreto de vinila para cobertura a 70°C</p>
+  <p><strong>PVC/ST10</strong> — composto de policloreto de vinila para cobertura a 90°C (resistente ao calor)</p>
+  <p><strong>Leve vs. comum</strong> — "leve" (light) = cobertura de menor espessura · "comum" (ordinary) = cobertura de maior espessura</p>
+</div>
+
+<footer>IEC 60227-5:2024 · ABNT NBR NM 247-5 · QC CERTIFICAÇÕES</footer>
+
+</body>
+</html>

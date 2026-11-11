@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IEC 60227 — Cabos de PVC</title>
+<style>
+  :root {
+    --azul: #4e77af;
+    --azul-claro: #97ccef;
+    --preto: #231f20;
+    --bg: #f5f7fa;
+    --branco: #ffffff;
+    --cinza-linha: #e8ecf1;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--preto);
+    padding: 32px 24px;
+    font-size: 14px;
+  }
+
+  header {
+    border-left: 5px solid var(--azul);
+    padding: 0 0 0 16px;
+    margin-bottom: 28px;
+  }
+
+  header h1 { font-size: 20px; color: var(--azul); font-weight: 700; }
+  header p { color: #666; font-size: 13px; margin-top: 4px; }
+
+  .secao-titulo {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--azul);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--azul-claro);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    margin-bottom: 28px;
+  }
+
+  thead tr { background: var(--azul); color: var(--branco); }
+  thead th {
+    padding: 11px 14px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  tbody tr { border-bottom: 1px solid var(--cinza-linha); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: #f0f5fb; }
+
+  tbody tr.grupo {
+    background: #edf2f9;
+    font-weight: 700;
+    color: var(--azul);
+  }
+
+  tbody tr.grupo td { padding: 8px 14px; font-size: 12px; letter-spacing: 0.3px; }
+
+  td { padding: 9px 14px; vertical-align: middle; font-size: 13px; }
+  tbody tr:not(.grupo) td:first-child { padding-left: 45px; }
+  tbody tr:not(.grupo) td:first-child::before { content: "·"; margin-right: 8px; color: var(--azul-claro); }
+
+  .codigo {
+    font-family: monospace;
+    font-size: 12px;
+    background: #edf2f9;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: var(--azul);
+    white-space: nowrap;
+  }
+
+  .btn-ver {
+    display: inline-block;
+    background: var(--azul);
+    color: var(--branco);
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: background 0.15s;
+    margin-top: 4px;
+  }
+
+  .btn-ver:hover { background: #3a5e96; }
+
+  .card-link {
+    background: var(--branco);
+    border: 1px solid var(--cinza-linha);
+    border-left: 4px solid var(--azul);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .card-link-info h3 { font-size: 14px; color: var(--azul); font-weight: 700; margin-bottom: 3px; }
+  .card-link-info p { font-size: 12px; color: #666; }
+
+  footer { font-size: 12px; color: #aaa; margin-top: 24px; text-align: right; }
+
+  .btn-lei {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid var(--azul);
+    color: var(--azul);
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    letter-spacing: 0.3px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .btn-lei:hover { background: var(--azul); color: var(--branco); }
+
+  .lei-painel {
+    display: none;
+    background: var(--branco);
+    border-left: 4px solid var(--azul);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .lei-painel.aberto { display: block; }
+  .lei-painel strong { color: var(--azul); }
+
+  .breadcrumb { font-size: 12px; color: #999; margin-bottom: 20px; }
+  .breadcrumb a { color: var(--azul); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="breadcrumb"><a href="index.html">← Normas de cabos</a> &rsaquo; IEC 60227</div>
+
+<header>
+  <h1>IEC 60227 — Cabos Isolados com Policloreto de Vinila (PVC)</h1>
+  <p>Polyvinyl chloride insulated cables of rated voltages up to and including 450/750 V &nbsp;|&nbsp; Fonte: IEC 60227-1:2024, Annex A (normativo)</p>
+  <button class="btn-lei" onclick="document.getElementById('lei').classList.toggle('aberto'); this.textContent = document.getElementById('lei').classList.contains('aberto') ? '▲ Lei de formação' : '▼ Lei de formação'">▼ Lei de formação</button>
+  <div class="lei-painel" id="lei">
+    Os cabos cobertos pela série IEC 60227 são designados por <strong>dois numerais</strong>, precedidos pelo número de referência da norma.<br><br>
+    O <strong>primeiro numeral</strong> indica a classe básica do cabo.<br>
+    O <strong>segundo numeral</strong> indica o tipo particular dentro da classe básica.<br><br>
+    <span style="font-family:monospace;font-size:13px;letter-spacing:0.5px">
+      60227 IEC <span style="color:var(--azul);font-weight:700;text-decoration:underline;text-decoration-style:dotted">5</span><span style="color:#1a7f3c;font-weight:700;text-decoration:underline;text-decoration-style:dotted">3</span>
+    </span><br>
+    <span style="font-size:12px;color:#666;padding-left:68px;display:inline-block">
+      <span style="color:var(--azul);font-weight:600">5</span> = Classe 5 (flexível com cobertura, uso normal) &nbsp;·&nbsp; <span style="color:#1a7f3c;font-weight:600">3</span> = Tipo 3 dentro da classe
+    </span>
+  </div>
+</header>
+
+<div class="secao-titulo">Classificação de código — todos os tipos IEC 60227</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Tipo / Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="grupo"><td colspan="2">Classe 0 — Cabos sem cobertura para instalação fixa</td></tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 01</span></td>
+      <td>Cabo unipolar sem cobertura, condutor rígido, uso geral</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 02</span></td>
+      <td>Cabo unipolar sem cobertura, condutor flexível, uso geral</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 05</span></td>
+      <td>Cabo unipolar sem cobertura, condutor maciço, fiação interna, 70°C</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 06</span></td>
+      <td>Cabo unipolar sem cobertura, condutor flexível, fiação interna, 70°C</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 07</span></td>
+      <td>Cabo unipolar sem cobertura, condutor maciço, fiação interna, 90°C</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 08</span></td>
+      <td>Cabo unipolar sem cobertura, condutor flexível, fiação interna, 90°C</td>
+    </tr>
+
+    <tr class="grupo"><td colspan="2">Classe 1 — Cabos com cobertura para instalação fixa</td></tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 10</span></td>
+      <td>Cabo com cobertura leve de policloreto de vinila para instalação fixa</td>
+    </tr>
+
+    <tr class="grupo"><td colspan="2">Classe 4 — Cabos flexíveis sem cobertura para uso leve</td></tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 41</span></td>
+      <td>Cordão plano de ouropel (tinsel)</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 42</span></td>
+      <td>Cordão paralelo plano sem cobertura</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 43</span></td>
+      <td>Cordão para correntes de iluminação decorativa interna</td>
+    </tr>
+
+    <tr class="grupo"><td colspan="2">Classe 5 — Cabos flexíveis com cobertura para uso normal</td></tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 52</span></td>
+      <td>Cordão com cobertura leve de policloreto de vinila</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 53</span></td>
+      <td>Cordão com cobertura comum de policloreto de vinila</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 56</span></td>
+      <td>Cordão com cobertura leve de PVC resistente ao calor (máx. 90°C)</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 57</span></td>
+      <td>Cordão com cobertura comum de PVC resistente ao calor (máx. 90°C)</td>
+    </tr>
+
+    <tr class="grupo"><td colspan="2">Classe 7 — Cabos flexíveis com cobertura para uso especial</td></tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 71c</span></td>
+      <td>Cabo circular com cobertura de PVC para conexões flexíveis</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 71f</span></td>
+      <td>Cabo plano com cobertura de PVC para conexões flexíveis</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 74</span></td>
+      <td>Cabo flexível com cobertura de PVC resistente a óleo, blindado</td>
+    </tr>
+    <tr>
+      <td><span class="codigo">60227 IEC 75</span></td>
+      <td>Cabo flexível com cobertura de PVC resistente a óleo, sem blindagem</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="secao-titulo">Normas detalhadas por tipo</div>
+
+<div class="card-link">
+  <div class="card-link-info">
+    <h3>IEC 60227-5:2024 — Cordões e Cabos Flexíveis</h3>
+    <p>Tipos 41 · 43 · 52 · 53 · 56 · 57 &nbsp;|&nbsp; Equivalente brasileiro: ABNT NBR NM 247-5</p>
+  </div>
+  <a class="btn-ver" href="cabos_60227.html">Ver tipos</a>
+</div>
+
+<footer>IEC 60227-1:2024, Annex A · QC CERTIFICAÇÕES</footer>
+
+</body>
+</html>

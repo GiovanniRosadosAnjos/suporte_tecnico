@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suporte Técnico</title>
+<style>
+  :root {
+    --azul: #4e77af;
+    --azul-claro: #97ccef;
+    --preto: #231f20;
+    --bg: #f5f7fa;
+    --branco: #ffffff;
+    --cinza-linha: #e8ecf1;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--preto);
+    padding: 48px 24px;
+    font-size: 14px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .boas-vindas {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  .boas-vindas h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--azul);
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+  }
+
+  .boas-vindas p {
+    font-size: 14px;
+    color: #666;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .divisor {
+    width: 48px;
+    height: 3px;
+    background: var(--azul);
+    border-radius: 2px;
+    margin: 16px auto;
+  }
+
+  .secao-titulo {
+    font-size: 11px;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 16px;
+  }
+
+  .card {
+    background: var(--branco);
+    border: 1px solid var(--cinza-linha);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.15s, border-color 0.15s;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    box-shadow: 0 3px 10px rgba(78,119,175,0.18);
+    border-color: var(--azul-claro);
+  }
+
+  .card-esq { display: flex; align-items: center; gap: 18px; }
+
+  .card-icone {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #e8f0fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .card-titulo { font-size: 15px; font-weight: 700; color: var(--azul); margin-bottom: 4px; }
+  .card-sub    { font-size: 12px; color: #666; line-height: 1.5; }
+
+  .seta { color: #bbb; font-size: 20px; flex-shrink: 0; }
+
+  footer {
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 56px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="boas-vindas">
+  <h1>Suporte Técnico</h1>
+  <div class="divisor"></div>
+  <p>Consultas técnicas sobre normas e regulamentos para certificação de produtos elétricos e eletrodomésticos.</p>
+</div>
+
+<div class="secao-titulo">Módulos disponíveis</div>
+
+<a class="card" href="./cabos/index.html">
+  <div class="card-esq">
+    <div class="card-icone">🔌</div>
+    <div>
+      <div class="card-titulo">Normas de Cabos Elétricos</div>
+      <div class="card-sub">
+        Classificação e tipos conforme IEC 60227 (PVC) e IEC 60245 (Borracha)<br>
+        Equivalentes ABNT: NBR NM 247-5 e NBR NM 287-4
+      </div>
+    </div>
+  </div>
+  <span class="seta">›</span>
+</a>
+
+<footer>suporte-tecnico · Referência técnica pessoal</footer>
+
+</body>
+</html>

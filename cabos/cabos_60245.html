@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IEC 60245-4 — Catálogo de Cabos</title>
+<style>
+  :root {
+    --azul: #4e77af;
+    --azul-claro: #97ccef;
+    --preto: #231f20;
+    --bg: #f5f7fa;
+    --branco: #ffffff;
+    --cinza-linha: #e8ecf1;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--preto);
+    padding: 32px 24px;
+    font-size: 14px;
+  }
+
+  header {
+    border-left: 5px solid var(--azul);
+    padding: 0 0 0 16px;
+    margin-bottom: 28px;
+  }
+
+  header h1 {
+    font-size: 20px;
+    color: var(--azul);
+    font-weight: 700;
+  }
+
+  header p {
+    color: #666;
+    font-size: 13px;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+
+  .secao-titulo {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--azul);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--azul-claro);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    margin-bottom: 32px;
+  }
+
+  thead tr { background: var(--azul); color: var(--branco); }
+
+  thead th {
+    padding: 11px 14px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  tbody tr { border-bottom: 1px solid var(--cinza-linha); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: #f0f5fb; }
+
+  tbody tr.ref-externa { background: #fafafa; color: #999; font-style: italic; }
+
+  td { padding: 10px 14px; vertical-align: middle; font-size: 13px; }
+
+  .codigo {
+    font-family: monospace;
+    font-size: 12px;
+    background: #edf2f9;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: var(--azul);
+    white-space: nowrap;
+  }
+
+  .codigo-br {
+    font-family: monospace;
+    font-size: 12px;
+    background: #e8f5ed;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: #1a7f3c;
+    white-space: nowrap;
+  }
+
+  .nota-bloco {
+    background: var(--branco);
+    border-left: 4px solid var(--azul-claro);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    line-height: 1.6;
+  }
+
+  .nota-bloco p { margin-bottom: 6px; }
+  .nota-bloco p:last-child { margin-bottom: 0; }
+
+  footer {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 16px;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>IEC 60245-4:2026 — Cordões e Cabos Flexíveis</h1>
+  <p>Rubber insulated cables · Part 4: Cords and flexible cables<br>
+  Equivalente brasileiro: <strong>ABNT NBR NM 287-4:2009</strong> (baseada em NM 287-4:2006 · IEC 60245-4:2004 MOD)</p>
+</header>
+
+<div class="secao-titulo">Tipos de cabos</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Seção</th>
+      <th>Designação IEC</th>
+      <th>Designação BR</th>
+      <th>Descrição</th>
+      <th>Formato</th>
+      <th>Condutores</th>
+      <th>Isolação</th>
+      <th>Cobertura</th>
+      <th>Temp. max.</th>
+      <th>U/U0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="ref-externa">
+      <td>4</td>
+      <td>—</td>
+      <td>—</td>
+      <td>Cordão trançado (referência IEC 60245-8:2026, cl. 6)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><span class="codigo">60245 IEC 53</span></td>
+      <td><span class="codigo-br">287 NM 53-CX-T</span></td>
+      <td>Cordão com cobertura comum de borracha vulcanizada</td>
+      <td>Circular</td>
+      <td>2, 3, 4 ou 5 (Cl. 5)</td>
+      <td>IE4 — borracha</td>
+      <td>SE3 — borracha</td>
+      <td>60°C</td>
+      <td>300/500 V</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><span class="codigo">60245 IEC 57</span></td>
+      <td><span class="codigo-br">287 NM 57-CX-T</span></td>
+      <td>Cordão com cobertura comum de policloroprene</td>
+      <td>Circular</td>
+      <td>2, 3, 4 ou 5 (Cl. 5)</td>
+      <td>IE4 — borracha</td>
+      <td>SE4 — policloroprene</td>
+      <td>60°C</td>
+      <td>300/500 V</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><span class="codigo">60245 IEC 66</span></td>
+      <td>—</td>
+      <td>Cabo flexível com cobertura pesada de policloroprene</td>
+      <td>Circular</td>
+      <td>1, 2, 3, 4 ou 5 (Cl. 5)</td>
+      <td>IE4 — borracha</td>
+      <td>SE4 (ou SE3+SE4 para &gt;10 mm²)</td>
+      <td>60°C</td>
+      <td>450/750 V</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><span class="codigo">60245 IEC 58 / 58f</span></td>
+      <td>—</td>
+      <td>Cabo de policloroprene para correntes decorativas</td>
+      <td>Circular / Plano</td>
+      <td>1 ou 2 (Cl. 5)</td>
+      <td>IE4 — borracha</td>
+      <td>SE4 — policloroprene</td>
+      <td>60°C</td>
+      <td>300/500 V</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="secao-titulo">Legenda de designação</div>
+
+<div class="nota-bloco">
+  <p><strong>287 NM XX-CX-T</strong></p>
+  <p>XX = tipo do cabo (53 = borracha comum · 57 = policloroprene comum)</p>
+  <p>C = classe do condutor (4 ou 5)</p>
+  <p>T = temperatura máxima do condutor (60°C para isolação IE4 · 90°C para EPR ou HEPR)</p>
+  <p>Exemplo: <span class="codigo">300/500 V 3 x 1,5 mm² 287 NM 57-C5-60 °C</span></p>
+</div>
+
+<footer>IEC 60245-4:2026 · ABNT NBR NM 287-4:2009 · QC CERTIFICAÇÕES</footer>
+
+</body>
+</html>

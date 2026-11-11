@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Normas de Cabos — QC CERTIFICAÇÕES</title>
+<style>
+  :root {
+    --azul: #4e77af;
+    --azul-claro: #97ccef;
+    --preto: #231f20;
+    --bg: #f5f7fa;
+    --branco: #ffffff;
+    --cinza-linha: #e8ecf1;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--preto);
+    padding: 40px 24px;
+    font-size: 14px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  header {
+    border-left: 5px solid var(--azul);
+    padding: 0 0 0 16px;
+    margin-bottom: 36px;
+  }
+
+  header h1 { font-size: 22px; color: var(--azul); font-weight: 700; }
+  header p { color: #666; font-size: 13px; margin-top: 5px; }
+
+  .secao-titulo {
+    font-size: 11px;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 14px;
+  }
+
+  .card {
+    background: var(--branco);
+    border: 1px solid var(--cinza-linha);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.15s, border-color 0.15s;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    box-shadow: 0 3px 10px rgba(78,119,175,0.18);
+    border-color: var(--azul-claro);
+  }
+
+  .card-esq { display: flex; align-items: center; gap: 18px; }
+
+  .card-icone {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .icone-pvc  { background: #e8f0fb; }
+  .icone-borr { background: #e6f4ec; }
+
+  .card-titulo { font-size: 15px; font-weight: 700; color: var(--azul); margin-bottom: 3px; }
+  .card-sub    { font-size: 12px; color: #666; line-height: 1.5; }
+  .card-tag    {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .tag-pvc  { background: #e8f0fb; color: var(--azul); }
+  .tag-borr { background: #e6f4ec; color: #1a7f3c; }
+
+  .seta { color: #bbb; font-size: 18px; flex-shrink: 0; }
+
+  footer { font-size: 12px; color: #ccc; margin-top: 40px; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Normas de Cabos Elétricos</h1>
+  <p>Selecione a família de normas para ver a classificação e os tipos</p>
+</header>
+
+<div class="secao-titulo">Selecione a norma</div>
+
+<a class="card" href="index_60227.html">
+  <div class="card-esq">
+    <div class="card-icone icone-pvc">🔵</div>
+    <div>
+      <div class="card-titulo">IEC 60227 — Cabos de PVC</div>
+      <div class="card-sub">
+        Polyvinyl chloride insulated cables (Cabos isolados com policloreto de vinila) até 450/750 V<br>
+        Equivalente BR: ABNT NBR NM 247-5
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <span class="card-tag tag-pvc">Policloreto de vinila</span>
+    <span class="seta">›</span>
+  </div>
+</a>
+
+<a class="card" href="index_60245.html">
+  <div class="card-esq">
+    <div class="card-icone icone-borr">🟢</div>
+    <div>
+      <div class="card-titulo">IEC 60245 — Cabos de Borracha</div>
+      <div class="card-sub">
+        Rubber insulated cables (Cabos isolados com compostos elastoméricos) até 450/750 V<br>
+        Equivalente BR: ABNT NBR NM 287-4
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <span class="card-tag tag-borr">Compostos elastoméricos</span>
+    <span class="seta">›</span>
+  </div>
+</a>
+
+<footer>QC CERTIFICAÇÕES · Referência interna</footer>
+
+</body>
+</html>
